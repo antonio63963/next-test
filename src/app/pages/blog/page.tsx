@@ -23,7 +23,7 @@ export default async function Blog() {
       <h1>Blog page</h1>
       <ul>
         
-      {posts.map((post: any) => {
+      {posts.map((post: {id: string, title: string}) => {
         return <li key={post.id}>
           <Link href={`/pages/blog/${post.id}`}>{post.title}</Link>
         </li>; 
